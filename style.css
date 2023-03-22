@@ -295,6 +295,10 @@ input[type="range"]:focus::-ms-fill-upper {
 .songName {
   font-size: 1rem;
 }
+.artistName {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
 
 .playlist ul li.active {
   font-weight: bold;

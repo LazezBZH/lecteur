@@ -49,7 +49,7 @@ function init() {
 
         playlist.innerHTML += `
            <li data-src="/data/sounds/${sound.id}.mp3" data-name="${sound.title}"
-                        data-index="${sound.id}"><div class="songName">${sound.title}</div><div class="duration">${sound.duration} &thinsp; &thinsp;<img src="/data/icons/play.svg" width="24px"></div></li>`;
+                        data-index="${sound.id}"><div><div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<img src="/data/icons/play.svg" width="24px"></div></li>`;
       }
       songList.addEventListener(
         "click",

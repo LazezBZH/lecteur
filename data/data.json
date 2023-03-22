@@ -22,65 +22,65 @@
   },
   {
     "id": 3,
-    "title": "Le malheur de Sophie",
-    "artist": "Les Bernardo",
-    "tags": ["humour", "français"],
-    "duration": "03:19"
+    "title": "Crazy",
+    "artist": "Anozira",
+    "tags": ["électro", "house ", "funk"],
+    "duration": "03:36"
   },
   {
     "id": 4,
-    "title": "Mood",
-    "artist": "Nettson et Léa Tchéna",
-    "tags": ["pop", "français"],
-    "duration": "02:26"
+    "title": "Opening para",
+    "artist": "Songo 21",
+    "tags": ["salsa", "cubaine"],
+    "duration": "03:09"
   },
   {
     "id": 5,
-    "title": "Jacques",
-    "artist": "Jack a la Lanterne",
-    "tags": ["guitare", "français"],
-    "duration": "03:34"
+    "title": "Overthinking",
+    "artist": "RYYZN ",
+    "tags": ["pop ", "hip-hop"],
+    "duration": "02:54"
   },
   {
     "id": 6,
-    "title": "Le malheur de Sophie",
-    "artist": "Les Bernardo",
-    "tags": ["humour", "français"],
-    "duration": "03:19"
+    "title": "Last Dance",
+    "artist": "Zero Project",
+    "tags": ["jazz", "clavier"],
+    "duration": "02:55"
   },
   {
     "id": 7,
-    "title": "Mood",
-    "artist": "Nettson et Léa Tchéna",
-    "tags": ["pop", "français"],
-    "duration": "02:26"
+    "title": "A Little Christmas Music",
+    "artist": "Lena Orsa",
+    "tags": ["ragtime", "Noël"],
+    "duration": "01:55"
   },
   {
     "id": 8,
-    "title": "Jacques",
-    "artist": "Jack a la Lanterne",
-    "tags": ["guitare", "français"],
-    "duration": "03:34"
+    "title": "Midnight Stroll",
+    "artist": "Ghostrifter ",
+    "tags": ["chillpop", "jazzy "],
+    "duration": "03:29"
   },
   {
     "id": 9,
-    "title": "Le malheur de Sophie",
-    "artist": "Les Bernardo",
-    "tags": ["humour", "français"],
-    "duration": "03:19"
+    "title": "Insane",
+    "artist": "b_Shake",
+    "tags": ["rock alternatif"],
+    "duration": "05:43"
   },
   {
     "id": 10,
-    "title": "Mood",
-    "artist": "Nettson et Léa Tchéna",
-    "tags": ["pop", "français"],
-    "duration": "02:26"
+    "title": "Les Restes De Niourk",
+    "artist": "Mel P",
+    "tags": ["chaos", "dark"],
+    "duration": "04:40"
   },
   {
     "id": 11,
-    "title": "Jacques",
-    "artist": "Jack a la Lanterne",
-    "tags": ["guitare", "français"],
-    "duration": "03:34"
+    "title": "Les quatres saisons - Eté (Vivaldi)",
+    "artist": "Daniel Bautista",
+    "tags": ["guitare", "classique revisité"],
+    "duration": "03:09"
   }
 ]
