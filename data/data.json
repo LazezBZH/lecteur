@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "title": "Le malheur de Sophie",
+    "artist": "Les Bernardo",
+    "tags": ["humour", "français"],
+    "duration": "03:19"
+  },
+  {
+    "id": 1,
+    "title": "Mood",
+    "artist": "Nettson et Léa Tchéna",
+    "tags": ["pop", "français"],
+    "duration": "02:26"
+  },
+  {
+    "id": 2,
+    "title": "Jacques",
+    "artist": "Jack a la Lanterne",
+    "tags": ["guitare", "français"],
+    "duration": "03:34"
+  },
+  {
+    "id": 3,
+    "title": "Le malheur de Sophie",
+    "artist": "Les Bernardo",
+    "tags": ["humour", "français"],
+    "duration": "03:19"
+  },
+  {
+    "id": 4,
+    "title": "Mood",
+    "artist": "Nettson et Léa Tchéna",
+    "tags": ["pop", "français"],
+    "duration": "02:26"
+  },
+  {
+    "id": 5,
+    "title": "Jacques",
+    "artist": "Jack a la Lanterne",
+    "tags": ["guitare", "français"],
+    "duration": "03:34"
+  },
+  {
+    "id": 6,
+    "title": "Le malheur de Sophie",
+    "artist": "Les Bernardo",
+    "tags": ["humour", "français"],
+    "duration": "03:19"
+  },
+  {
+    "id": 7,
+    "title": "Mood",
+    "artist": "Nettson et Léa Tchéna",
+    "tags": ["pop", "français"],
+    "duration": "02:26"
+  },
+  {
+    "id": 8,
+    "title": "Jacques",
+    "artist": "Jack a la Lanterne",
+    "tags": ["guitare", "français"],
+    "duration": "03:34"
+  },
+  {
+    "id": 9,
+    "title": "Le malheur de Sophie",
+    "artist": "Les Bernardo",
+    "tags": ["humour", "français"],
+    "duration": "03:19"
+  },
+  {
+    "id": 10,
+    "title": "Mood",
+    "artist": "Nettson et Léa Tchéna",
+    "tags": ["pop", "français"],
+    "duration": "02:26"
+  },
+  {
+    "id": 11,
+    "title": "Jacques",
+    "artist": "Jack a la Lanterne",
+    "tags": ["guitare", "français"],
+    "duration": "03:34"
+  }
+]

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/f272fe714d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <header>
+            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl1">
+            <h1>JUKEBOX</h1>
+            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl2">
+        </header>
+    <div class="container">
+       
+        <div class="music-player">
+            <div class="player">
+                <!-- <img src="/data/vinyl.png" alt="Vinyl" class="vinyl"> -->
+                <h2 id="title"></h2>
+                <div id="cover"></div>
+                <input type="range" min="0" max="100" value="0" step="0.1" title="progression">
+                <div id="timer"></div>
+                <div class="controls">
+                    <button class="previous" id="previous" aria-labelledby="previous"><img src="/data/icons/vintage/previous.png" alt="" width="36px"></button>
+                    <button class="play-pause" id="play-pause" aria-labelledby="play-pause"><img id="play" src="/data/icons/vintage/play.png" alt="" width="36px"><img id="pause" class="hidden" src="/data/icons/vintage/pause.png" alt="" width="36px"></button>
+                    <button class="next" id="next" aria-labelledby="next"><img src="/data/icons/vintage/next.png" alt="" width="36px"></button>
+                </div>
+                <div class="volumeContainer">
+                   <img src="/data/icons/vintage/volume.svg" alt="" width="18px">
+                    <input type="range" min="0" max="100" value="50" class="slider" title="volume">
+                    <img src="/data/icons/vintage/volume.svg" alt="" width="30px">
+                </div>
+                <div id="download"></div>
+
+             
+            </div>
+            <div class="playlist" >
+                <h2>Playlist</h2>
+                <ul class="song-list" id="playlist">
+                </ul>
+                <audio src="" id="audio"></audio>
+            </div>
+            
+        </div>
+    </div>
+
+<script src="/script.js"></script>
+ 
+</body>
+</html>
