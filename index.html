@@ -9,29 +9,32 @@
     <script src="https://kit.fontawesome.com/f272fe714d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+   
  <header>
-            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl1">
+            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl1" id="vinyl1">
             <h1>JUKEBOX</h1>
-            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl2">
+            <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl2" id="vinyl2">
+        <button id="theme-toggle">Thème actuel: vintage, changer pour: moderne</button>
+  </label>
         </header>
     <div class="container">
        
         <div class="music-player">
             <div class="player">
-                <!-- <img src="/data/vinyl.png" alt="Vinyl" class="vinyl"> -->
+              
                 <h2 id="title"></h2>
                 <div id="cover"></div>
                 <input type="range" min="0" max="100" value="0" step="0.1" title="progression">
                 <div id="timer"></div>
                 <div class="controls">
-                    <button class="previous" id="previous" aria-labelledby="previous"><img src="/data/icons/vintage/previous.png" alt="" width="36px"></button>
-                    <button class="play-pause" id="play-pause" aria-labelledby="play-pause"><img id="play" src="/data/icons/vintage/play.png" alt="" width="36px"><img id="pause" class="hidden" src="/data/icons/vintage/pause.png" alt="" width="36px"></button>
-                    <button class="next" id="next" aria-labelledby="next"><img src="/data/icons/vintage/next.png" alt="" width="36px"></button>
+                    <button class="previous" id="previous" aria-labelledby="previous"><img src="/data/icons/vintage/previous.png" alt="" width="36px" id="previousImg"></button>
+                    <button class="play-pause" id="play-pause" aria-labelledby="play-pause"><img id="play" src="/data/icons/vintage/play.png" alt="" width="36px" id="play"><img id="pause" class="hidden" src="/data/icons/vintage/pause.png" alt="" width="36px" id="pause"></button>
+                    <button class="next" id="next" aria-labelledby="next"><img src="/data/icons/vintage/next.png" alt="" width="36px" id="nextImg" ></button>
                 </div>
                 <div class="volumeContainer">
-                   <img src="/data/icons/vintage/volume.svg" alt="" width="18px">
+                   <img src="/data/icons/vintage/volume.svg" alt="" width="18px" id="volume1">
                     <input type="range" min="0" max="100" value="50" class="slider" title="volume">
-                    <img src="/data/icons/vintage/volume.svg" alt="" width="30px">
+                    <img src="/data/icons/vintage/volume.svg" alt="" width="30px" id="volume2">
                 </div>
                 <div id="download"></div>
 
