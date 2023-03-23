@@ -13,6 +13,13 @@ html[data-theme="vintage"] {
   --cover-2: wheat;
   --cover-3: rgba(87, 51, 51, 0.2);
   --background: url(/data/bg1.jpg);
+  --equa-1: #b7918c;
+  --equa-2: rgb(54, 36, 23);
+  --equa-3: rgb(107, 92, 92);
+  --equa-4: #92817a;
+  --equa-5: #7e7f7c;
+  --equa-6: rgb(81, 39, 39);
+  --equa-7: #3f3a41;
 }
 
 html[data-theme="modern"] {
@@ -26,6 +33,13 @@ html[data-theme="modern"] {
   --cover-2: rgb(8, 222, 8);
   --cover-3: rgba(2, 92, 2, 0.2);
   --background: url(/data/bg2.jpg);
+  --equa-1: #fe53bb;
+  --equa-2: #08f7fe;
+  --equa-3: #ff9472;
+  --equa-4: yellow;
+  --equa-5: #ff8b8b;
+  --equa-6: #40f99b;
+  --equa-7: #fe6b35;
 }
 body {
   min-height: 100vh;
@@ -109,8 +123,15 @@ body {
 .player h2 {
   font-size: 1.5rem;
   color: var(--txt-1);
+  text-align: center;
 }
-
+h3 {
+  font-size: 1rem;
+  color: var(--txt-1);
+  font-family: Segoe UI, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
 .volumeContainer {
   display: flex;
   width: 75%;
@@ -261,10 +282,11 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .playlist h2 {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-align: center;
   font-size: 40px;
   font-family: Tahoma, cursive;
+  flex: 1;
 }
 
 .playlist ul {
@@ -371,6 +393,66 @@ h1 {
   color: var(--txt-2);
   font-family: perpetua, sans-serif;
 }
+
+/* equalizer */
+.equalizer {
+  text-align: center;
+  margin: 10px 0;
+  width: 100px;
+  margin-top: -1rem;
+}
+.equal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.column {
+  display: inline-block;
+  width: 5px;
+}
+
+#one {
+  height: 40px;
+  background-color: var(--equa-1);
+}
+
+#two {
+  height: 35px;
+  background-color: var(--equa-2);
+}
+
+#three {
+  height: 25px;
+  background-color: var(--equa-3);
+}
+
+#four {
+  height: 35px;
+  background-color: var(--equa-4);
+}
+
+#five {
+  height: 45px;
+  background-color: var(--equa-5);
+}
+
+#six {
+  height: 17px;
+  background-color: var(--equa-6);
+}
+
+#seven {
+  height: 50px;
+  background-color: var(--equa-7);
+}
+
+#invis {
+  display: inline-block;
+  height: 55px;
+  width: 1px;
+  background-color: transparent;
+}
+
 @media screen and (max-width: 800px) {
   body {
     overflow-y: scroll;

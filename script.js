@@ -4,6 +4,7 @@ const progressEl = document.querySelector('input[type="range"]');
 const vinyl1 = document.querySelector(".vinyl1");
 const vinyl2 = document.querySelector(".vinyl2");
 const title = document.querySelector("#title");
+const subTitle = document.querySelector("#subTitle");
 const cover = document.querySelector("#cover");
 const download = document.querySelector("#download");
 const volumeSlider = document.querySelector(".slider");
@@ -48,7 +49,7 @@ function init() {
         let sound = data[i];
 
         playlist.innerHTML += `
-           <li data-src="/data/sounds/${sound.id}.mp3" data-name="${sound.title}"
+           <li data-src="/data/sounds/${sound.title}.mp3" data-name="${sound.title}" data-artist="${sound.artist}" 
                         data-index="${sound.id}"><div><div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<img src="/data/icons/play.svg" width="24px"></div></li>`;
       }
       songList.addEventListener(
@@ -72,6 +73,7 @@ function init() {
         vinyl1.classList.add("vinyl1-animation");
         vinyl2.classList.remove("vinyl2-paused");
         vinyl2.classList.add("vinyl2-animation");
+        animate();
       }
 
       function pauseAudio() {
@@ -173,10 +175,12 @@ function init() {
 
         let songListItems = songList.getElementsByTagName("li");
         songHeading = songListItems[songIndex].getAttribute("data-name");
+        songSubHeading = songListItems[songIndex].getAttribute("data-artist");
 
         title.innerText = songHeading;
+        subTitle.innerHTML = `by ` + songSubHeading;
         cover.innerHTML = `<img src="/data/covers/${songIndex}.png" alt="" class="cover">`;
-        download.innerHTML = `<a href="/data/sounds/${songIndex}.mp3" download>Télécharger ce titre! &#x1F4BF;</a>`;
+        download.innerHTML = `<a href="/data/sounds/${songHeading}.mp3" download>Télécharger ce titre! &#x1F4BF;</a>`;
         for (i = 0; i < songListItems.length; i++) {
           songListItems[i].classList.remove("active");
         }

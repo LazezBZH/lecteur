@@ -23,6 +23,7 @@
             <div class="player">
               
                 <h2 id="title"></h2>
+                <h3 id="subTitle"></h3>
                 <div id="cover"></div>
                 <input type="range" min="0" max="100" value="0" step="0.1" title="progression">
                 <div id="timer"></div>
@@ -41,7 +42,19 @@
              
             </div>
             <div class="playlist" >
-                <h2>Playlist</h2>
+                <div class="equal">
+                    <h2>Playlist</h2> 
+                    <div class="equalizer">
+                        <span class="column" id="one"></span>
+                        <span class="column" id="two"></span>
+                        <span class="column" id="three"></span>
+                        <span class="column" id="four"></span>
+                        <span class="column" id="five"></span>
+                        <span class="column" id="six"></span>
+                        <span class="column" id="seven"></span> 
+                        <span id="invis"></span>
+                    </div>
+                </div>
                 <ul class="song-list" id="playlist">
                 </ul>
                 <audio src="" id="audio"></audio>
@@ -49,8 +62,18 @@
             
         </div>
     </div>
-
+<!-- <div class="equalizer">
+   <span class="column" id="purple"></span>
+   <span class="column" id="blue"></span>
+   <span class="column" id="cyan"></span>
+   <span class="column" id="green"></span>
+   <span class="column" id="yellow"></span>
+   <span class="column" id="orange"></span>
+   <span class="column" id="red"></span> 
+   <span id="black"></span>
+</div> -->
 <script src="/script.js"></script>
+<script src="/equalizer.js"></script>
  
 </body>
 </html>
