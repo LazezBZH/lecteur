@@ -49,8 +49,9 @@ function init() {
         let sound = data[i];
 
         playlist.innerHTML += `
+        
            <li data-src="/data/sounds/${sound.title}.mp3" data-name="${sound.title}" data-artist="${sound.artist}" 
-                        data-index="${sound.id}"><div><div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<img src="/data/icons/play.svg" width="24px"></div></li>`;
+                        data-index="${sound.id}"><div> <div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<div class="img-duration"><img src="/data/icons/play.svg" width="24px"></div></div></li>`;
       }
       songList.addEventListener(
         "click",
@@ -74,6 +75,7 @@ function init() {
         vinyl2.classList.remove("vinyl2-paused");
         vinyl2.classList.add("vinyl2-animation");
         animate();
+        document.getElementById("equalizer").style.display = "block";
       }
 
       function pauseAudio() {
@@ -83,6 +85,7 @@ function init() {
         isPlaying = false;
         vinyl1.classList.add("vinyl1-paused");
         vinyl2.classList.add("vinyl2-paused");
+        document.getElementById("equalizer").style.display = "none";
       }
 
       function previousSong() {
@@ -178,7 +181,7 @@ function init() {
         songSubHeading = songListItems[songIndex].getAttribute("data-artist");
 
         title.innerText = songHeading;
-        subTitle.innerHTML = `by ` + songSubHeading;
+        subTitle.innerHTML = `par ` + songSubHeading;
         cover.innerHTML = `<img src="/data/covers/${songIndex}.png" alt="" class="cover">`;
         download.innerHTML = `<a href="/data/sounds/${songHeading}.mp3" download>Télécharger ce titre! &#x1F4BF;</a>`;
         for (i = 0; i < songListItems.length; i++) {

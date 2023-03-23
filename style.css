@@ -124,6 +124,7 @@ body {
   font-size: 1.5rem;
   color: var(--txt-1);
   text-align: center;
+  margin-top: 0.5rem;
 }
 h3 {
   font-size: 1rem;
@@ -313,7 +314,13 @@ input[type="range"]:focus::-ms-fill-upper {
   justify-content: center;
   align-items: center;
 }
-
+.img-duration {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .songName {
   font-size: 1rem;
 }
@@ -327,7 +334,7 @@ input[type="range"]:focus::-ms-fill-upper {
   font-size: 1.3rem;
   padding-left: 15px;
 }
-.playlist ul li.active img {
+.playlist ul li.active .img-duration {
   padding: 0.2rem;
   /* background-color: var(--bg-player); */
   border-radius: 50%;
@@ -452,7 +459,21 @@ h1 {
   width: 1px;
   background-color: transparent;
 }
-
+.equalizer-bar {
+  fill: var(--txt-1);
+}
+.equalizer-container {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  background-color: red;
+}
+#equalizer {
+  position: absolute;
+  bottom: -20%;
+  right: 50%;
+  transform: translate(50%, 20%);
+}
 @media screen and (max-width: 800px) {
   body {
     overflow-y: scroll;
