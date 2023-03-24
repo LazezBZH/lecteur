@@ -7,7 +7,7 @@ const title = document.querySelector("#title");
 const subTitle = document.querySelector("#subTitle");
 const cover = document.querySelector("#cover");
 const download = document.querySelector("#download");
-const volumeSlider = document.querySelector(".slider");
+const volumeSlider = document.querySelector(".volume");
 
 const previousButton = document.querySelector("#previous");
 const playPauseButton = document.querySelector("#play-pause");
@@ -51,7 +51,7 @@ function init() {
         playlist.innerHTML += `
         
            <li data-src="/data/sounds/${sound.title}.mp3" data-name="${sound.title}" data-artist="${sound.artist}" 
-                        data-index="${sound.id}"><div> <div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<div class="img-duration"><img src="/data/icons/play.svg" width="24px"></div></div></li>`;
+                        data-index="${sound.id}"><div> <div class="songName">${sound.title}</div><div class="artistName">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<div class="img-duration"><img src="/data/icons/play.svg" width="24px" alt="play"></div></div></li>`;
       }
       songList.addEventListener(
         "click",
@@ -182,7 +182,7 @@ function init() {
 
         title.innerText = songHeading;
         subTitle.innerHTML = `par ` + songSubHeading;
-        cover.innerHTML = `<img src="/data/covers/${songIndex}.png" alt="" class="cover">`;
+        cover.innerHTML = `<img src="/data/covers/${songIndex}.png" alt="${songHeading}" class="cover">`;
         download.innerHTML = `<a href="/data/sounds/${songHeading}.mp3" download>Télécharger ce titre! &#x1F4BF;</a>`;
         for (i = 0; i < songListItems.length; i++) {
           songListItems[i].classList.remove("active");
@@ -223,6 +223,7 @@ if (storedTheme === "modern") {
   document.getElementById("nextImg").src = "/data/icons/modern/next.svg";
   document.getElementById("volume1").src = "/data/icons/modern/volume.svg";
   document.getElementById("volume2").src = "/data/icons/modern/volume.svg";
+  document.getElementById("gif").src = "/data/songs modern.gif";
 }
 
 toggle.onclick = function () {
@@ -246,6 +247,7 @@ toggle.onclick = function () {
     document.getElementById("nextImg").src = "/data/icons/modern/next.svg";
     document.getElementById("volume1").src = "/data/icons/modern/volume.svg";
     document.getElementById("volume2").src = "/data/icons/modern/volume.svg";
+    document.getElementById("gif").src = "/data/songs modern.gif";
   } else {
     toggle.innerHTML = `Thème actuel: vintage, changer pour: moderne`;
     document.getElementById("vinyl1").src = "/data/vinyl.png";
@@ -257,5 +259,6 @@ toggle.onclick = function () {
     document.getElementById("nextImg").src = "/data/icons/vintage/next.png";
     document.getElementById("volume1").src = "/data/icons/vintage/volume.svg";
     document.getElementById("volume2").src = "/data/icons/vintage/volume.svg";
+    document.getElementById("gif").src = "/data/songs vintage.gif";
   }
 };

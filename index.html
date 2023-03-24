@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecteur</title>
+    <title>Songs for you</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/f272fe714d.js" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <meta name="description" content="Lecteur musique">
+
+    
 </head>
 <body>
    
  <header>
   
             <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl1" id="vinyl1">
-            <h1>JUKEBOX</h1>
+            <h1><img src="/data/songs vintage.gif" alt="songs for you" id="gif"></h1>
             <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl2" id="vinyl2">
              
         <button id="theme-toggle">Thème actuel: vintage, changer pour: moderne</button>
@@ -38,7 +41,7 @@
                 <div class="equalizer-container"><div id="equalizer" style="display: none;"></div></div>
                 <div class="volumeContainer">
                    <img src="/data/icons/vintage/volume.svg" alt="" width="18px" id="volume1">
-                    <input type="range" min="0" max="100" value="50" class="slider" title="volume">
+                    <input type="range" min="0" max="100" value="50" class="volume" title="volume">
                     <img src="/data/icons/vintage/volume.svg" alt="" width="30px" id="volume2">
                 </div>
                 <div id="download"></div>

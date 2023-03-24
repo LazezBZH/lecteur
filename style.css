@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Barlow+Condensed:wght@400;700&family=Barlow:ital@1&family=Bellefair&family=Noto+Serif:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 html[data-theme="vintage"] {
-  --bg-player: rgb(107, 92, 92);
+  --bg-player: #6b5c5c;
   --txt-1: black;
   --txt-2: white;
   --range-1: rgb(101, 165, 42);
@@ -14,16 +16,16 @@ html[data-theme="vintage"] {
   --cover-3: rgba(87, 51, 51, 0.2);
   --background: url(/data/bg1.jpg);
   --equa-1: #b7918c;
-  --equa-2: rgb(54, 36, 23);
+  --equa-2: #362417;
   --equa-3: rgb(107, 92, 92);
   --equa-4: #92817a;
   --equa-5: #7e7f7c;
-  --equa-6: rgb(81, 39, 39);
+  --equa-6: #512727;
   --equa-7: #3f3a41;
 }
 
 html[data-theme="modern"] {
-  --bg-player: yellow;
+  --bg-player: #ffff00;
   --txt-1: rgb(4, 172, 161);
   --txt-2: rgb(110, 12, 110);
   --range-1: purple;
@@ -36,7 +38,7 @@ html[data-theme="modern"] {
   --equa-1: #fe53bb;
   --equa-2: #08f7fe;
   --equa-3: #ff9472;
-  --equa-4: yellow;
+  --equa-4: #ffff00;
   --equa-5: #ff8b8b;
   --equa-6: #40f99b;
   --equa-7: #fe6b35;
@@ -60,7 +62,7 @@ body {
 .music-player {
   display: flex;
   flex-direction: row;
-  max-height: 550px;
+  max-height: 580px;
   width: 800px;
   font-family: Copperplate Gothic Light, serif;
   margin-top: 1rem;
@@ -140,7 +142,7 @@ h3 {
   align-items: center;
 }
 
-.slider {
+.volume {
   margin: 0 20px;
   height: 10px;
   outline: none;
@@ -286,7 +288,7 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-bottom: 0px;
   text-align: center;
   font-size: 40px;
-  font-family: Tahoma, cursive;
+  font-family: "Alkatra", cursive;
   flex: 1;
 }
 
@@ -301,10 +303,11 @@ input[type="range"]:focus::-ms-fill-upper {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding: 20px 20px 20px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 15px 0 10px 0;
+  border-bottom: 1px solid var(--bg-player);
   font-family: Segoe UI, sans-serif;
 }
+
 .playlist ul li:first-child {
   flex: 0.5;
 }
@@ -380,10 +383,15 @@ header {
   background-color: var(--bg-player);
 }
 h1 {
-  text-align: center;
-  color: var(--txt-2);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
 }
-
+h1 img {
+  height: 80%;
+}
 #theme-toggle {
   max-width: 10rem;
   position: absolute;
@@ -466,7 +474,6 @@ h1 {
   width: 100%;
   position: relative;
   height: 50px;
-  background-color: red;
 }
 #equalizer {
   position: absolute;
@@ -474,28 +481,83 @@ h1 {
   right: 50%;
   transform: translate(50%, 20%);
 }
-@media screen and (max-width: 800px) {
-  body {
-    overflow-y: scroll;
-  }
 
+@media screen and (max-width: 1200px) {
+  #theme-toggle {
+    max-width: 5rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0.1rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+  }
+  .vinyl {
+    width: 15vh;
+  }
+}
+@media screen and (max-width: 890px) {
+  .vinyl2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 810px) {
+  header {
+    justify-content: start;
+    padding-left: 1rem;
+  }
   .music-player {
     flex-direction: column;
+    max-width: min(90%, 500px);
   }
-
+  .player {
+    border-radius: 10px;
+    border: var(--txt-1) 3px solid;
+    border-right: var(--txt-1) 3px solid;
+    margin-bottom: 1rem;
+    max-height: 450px;
+    position: relative;
+  }
+  .playlist {
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  body {
+    min-height: 1350px;
+  }
+  .player h2 {
+    font-size: 1.1rem;
+    position: absolute;
+    margin: 0;
+    left: 20px;
+    top: 15px;
+  }
+  .player h3 {
+    font-size: 0.9rem;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  #cover {
+    margin-top: 40px;
+  }
+  #timer {
+    margin-top: 0;
+  }
   .volumeContainer {
+    margin-top: -10px;
     margin-bottom: 20px;
   }
-
-  .player {
-    border: none;
+  #download {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
+}
 
-  .copyright {
-    top: 0;
-    right: 10px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    text-align: left;
+@media screen and (max-width: 470px) {
+  .vinyl1 {
+    display: none;
   }
 }
