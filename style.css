@@ -528,11 +528,14 @@ h1 img {
     min-height: 1350px;
   }
   .player h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     margin: 0;
     left: 20px;
     top: 15px;
+    max-width: 50%;
+    height: 35px;
+    overflow: hidden;
   }
   .player h3 {
     font-size: 0.9rem;
