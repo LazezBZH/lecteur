@@ -3,7 +3,7 @@ function randomNumber(min, max) {
   return number;
 }
 
-//Initialise starting values
+//starting values
 var one, two, three, four, five, six, seven;
 one = 40;
 two = 35;
@@ -13,7 +13,7 @@ five = 45;
 six = 17;
 seven = 50;
 
-// A Function to change the height of a column more or less randomly
+// change the height of column randomly
 function changeHeight(column, height) {
   height -= randomNumber(-20, 20);
   if (height > 50) height = 50;
@@ -22,7 +22,7 @@ function changeHeight(column, height) {
   return height;
 }
 
-//A Function that will be run every 50ms to animate the equalizer
+//if player is playing changeHeight will be called every 50ms for each bar
 function animate() {
   if (isPlaying) {
     one = changeHeight(document.getElementById("one"), one);
@@ -33,7 +33,6 @@ function animate() {
     six = changeHeight(document.getElementById("six"), six);
     seven = changeHeight(document.getElementById("seven"), seven);
 
-    //Repeat this function every 50 ms
     setTimeout(animate, 50);
   }
 }

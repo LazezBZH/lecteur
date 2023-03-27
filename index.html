@@ -6,87 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Songs for you</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="https://kit.fontawesome.com/f272fe714d.js" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta name="description" content="Lecteur musique">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b7918c">
-<meta name="msapplication-TileColor" content="#b7918c">
-<meta name="theme-color" content="#b7918c">
-
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b7918c">
+    <meta name="msapplication-TileColor" content="#b7918c">
+    <meta name="theme-color" content="#b7918c">   
 </head>
-<body>
-   
- <header>
-  
+
+    <body>
+    
+        <header>
+            <h1>Songs for you</h1>
             <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl1" id="vinyl1">
-            <h1><img src="/data/songs vintage.gif" alt="songs for you" id="gif"></h1>
+            <div class="heading"><img src="/data/songs vintage.gif" alt="songs for you" id="gif"></div>
             <img src="/data/vinyl.png" alt="Vinyl" class="vinyl vinyl2" id="vinyl2">
-             
-        <button id="theme-toggle">Thème actuel: vintage, changer pour: moderne</button>
-  </label>
+            <button id="theme-toggle">Thème actuel: vintage, changer pour: moderne</button>
         </header>
-    <div class="container">
-       
-        <div class="music-player">
-        
-            <div class="player">
-              
-                <h2 id="title"></h2>
-                <h3 id="subTitle"></h3>
-                <div id="cover"></div>
-                <input type="range" min="0" max="100" value="0" step="0.1" title="progression">
-                <div id="timer"></div>
-                <div class="controls">
-                    <button class="previous" id="previous" aria-labelledby="previous"><img src="/data/icons/vintage/previous.png" alt="" width="36px" id="previousImg"></button>
-                    <button class="play-pause" id="play-pause" aria-labelledby="play-pause"><img id="play" src="/data/icons/vintage/play.png" alt="" width="36px" id="play"><img id="pause" class="hidden" src="/data/icons/vintage/pause.png" alt="" width="36px" id="pause"></button>
-                    <button class="next" id="next" aria-labelledby="next"><img src="/data/icons/vintage/next.png" alt="" width="36px" id="nextImg" ></button>
-                </div>
-                <div class="equalizer-container"><div id="equalizer" style="display: none;"></div></div>
-                <div class="volumeContainer">
-                   <img src="/data/icons/vintage/volume.svg" alt="" width="18px" id="volume1">
-                    <input type="range" min="0" max="100" value="50" class="volume" title="volume">
-                    <img src="/data/icons/vintage/volume.svg" alt="" width="30px" id="volume2">
-                </div>
-                <div id="download"></div>
 
-             
-            </div>
-            <div class="playlist" >
-              
-                <div class="equal">
-                    <button class="random" id="random"><img src="/data/icons/shuffle.png" alt="">&thinsp; Aléatoire</button> 
-                    <h2>Playlist</h2> 
-                    <div class="equalizer">
-                        <span class="column" id="one"></span>
-                        <span class="column" id="two"></span>
-                        <span class="column" id="three"></span>
-                        <span class="column" id="four"></span>
-                        <span class="column" id="five"></span>
-                        <span class="column" id="six"></span>
-                        <span class="column" id="seven"></span> 
-                        <span id="invis"></span>
+        <main class="container">
+            <!-- all the player -->
+            <div class="music-player">
+                <!-- partie player proprement dite -->
+                <div class="player">
+                    <h2 id="title"></h2>
+                    <h3 id="subTitle"></h3>
+                    <div id="cover"></div>
+                    <input type="range" min="0" max="100" value="0" step="0.1" title="progression">
+                    <div id="timer"></div>
+                    <!-- play pause next previous -->
+                    <div class="controls">
+                        <button class="previous" id="previous" aria-labelledby="previous"><img src="/data/icons/vintage/previous.png" alt="" width="36px" id="previousImg"></button>
+                        <button class="play-pause" id="play-pause" aria-labelledby="play-pause"><img id="play" src="/data/icons/vintage/play.png" alt="" width="36px" id="play"><img id="pause" class="hidden" src="/data/icons/vintage/pause.png" alt="" width="36px" id="pause"></button>
+                        <button class="next" id="next" aria-labelledby="next"><img src="/data/icons/vintage/next.png" alt="" width="36px" id="nextImg" ></button>
                     </div>
-                   
+                    <!-- equalizer si accès au haut-parleur -->
+                    <div class="equalizer-container">
+                        <div id="equalizer" style="display: none;"></div>
+                    </div>
+                    <!-- controles de volume -->
+                    <div class="volume-container">
+                        <img src="/data/icons/vintage/volume.svg" alt="" width="18px" id="volume1">
+                            <input type="range" min="0" max="100" value="50" class="volume" title="volume">
+                            <img src="/data/icons/vintage/volume.svg" alt="" width="30px" id="volume2">
+                        </div>
+                    <!-- load music -->
+                    <div id="download"></div>
                 </div>
-                
-                <ul class="song-list" id="playlist">
-                </ul>
-                <audio src="" id="audio"></audio>
-            </div>
-            
-        </div>
-    </div>
+                <!--  playlist, random start or selection -->
+                <div class="playlist" >
+                    <div class="playlist-header">
+                        <button class="random" id="random"><img src="/data/icons/shuffle.png" alt="">&thinsp; Aléatoire</button> 
+                        <h2>Playlist</h2> 
+                        <!-- fake equalizer -->
+                        <div class="equalizer">
+                            <span class="column" id="one"></span>
+                            <span class="column" id="two"></span>
+                            <span class="column" id="three"></span>
+                            <span class="column" id="four"></span>
+                            <span class="column" id="five"></span>
+                            <span class="column" id="six"></span>
+                            <span class="column" id="seven"></span> 
+                            <span id="invis"></span>
+                        </div>
+                    </div>
+                    <!-- playlist generate by js -->
+                    <ul class="song-list" id="playlist"></ul>
 
-<script src="/script.js"></script>
-<script src="/fakeEqualizer.js"></script>
-<script src="/equalizer.js"></script>
-<script src="/mode.js"></script>
- 
-</body>
+                    <audio src="" id="audio"></audio>
+
+                </div>
+            </div>
+        </main>
+
+        <script src="/script.js"></script>
+        <script src="/fakeEqualizer.js"></script>
+        <script src="/equalizer.js"></script>
+        <script src="/mode.js"></script>
+    
+    </body>
 </html>
