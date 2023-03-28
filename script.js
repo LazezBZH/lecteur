@@ -40,6 +40,7 @@ if (!songIndex) {
 }
 let randomChoice = false;
 let randomBtn = document.getElementById("random");
+let randomNum = 0;
 
 console.log(randomChoice);
 function init() {
@@ -84,8 +85,14 @@ function init() {
         console.log(randomChoice);
       }
       function playRandom() {
+        // let randomNum = 0;
         const randomIndex = Math.floor(Math.random() * data.length);
         console.log(randomIndex);
+        if (randomIndex == randomNum) {
+          playRandom();
+        }
+        randomNum = randomIndex;
+        // console.log(randomIndex);
         document.getElementsByClassName("player")[0].style.display = "flex";
         songIndex = randomIndex;
         loadAudio();
