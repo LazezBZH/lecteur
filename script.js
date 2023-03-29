@@ -97,6 +97,7 @@ function init() {
       //si le prochain random index figure dans ce tableau on en génère un nouveau
       //si le tableau contient tous les titres on le vide
       function playRandom() {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         const randomIndex = Math.floor(Math.random() * data.length);
         console.log("index random song playing:", randomIndex);
         if (randomNums.length == 12) {
@@ -106,16 +107,18 @@ function init() {
           playRandom();
         } else {
           randomNums.push(randomIndex);
+
+          console.log("index song(s) allready played:", randomNums);
+          document.getElementsByClassName("player")[0].style.display = "flex";
+          songIndex = randomIndex;
+          loadAudio();
+          playAudio();
         }
-        console.log("index song(s) allready played:", randomNums);
-        document.getElementsByClassName("player")[0].style.display = "flex";
-        songIndex = randomIndex;
-        loadAudio();
-        playAudio();
       }
 
       //player et controls
       function playAudio() {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         audio.play();
         playPauseButton.querySelector("#pause").classList.remove("hidden");
         playPauseButton.querySelector("#play").classList.add("hidden");
@@ -215,12 +218,12 @@ function init() {
       function aPreviousSong() {
         if (!randomChoice) {
           previousSong();
-        } else playRandom();
+        } else if (randomChoice) playRandom();
       }
       function aNextSong() {
         if (!randomChoice) {
           nextSong();
-        } else playRandom();
+        } else if (randomChoice) playRandom();
       }
 
       //volume et barre de progression
@@ -270,6 +273,7 @@ function init() {
         songList.getElementsByTagName("li")[songIndex].classList.add("active");
         var width = screen.width;
         if (width >= 810) {
+          songList.getElementsByTagName("li")[songIndex].scrollIntoView();
         }
       }
       //générer playlist d'après le json

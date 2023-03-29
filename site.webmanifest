@@ -1,6 +1,9 @@
 {
-  "name": "Song for you",
-  "short_name": "Song for you",
+  "name": "Songs for you",
+  "short_name": "Songs",
+  "description": "Lecteur audio",
+  "lang": "fr",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,12 +17,14 @@
     },
     {
       "src": "/android-chrome-192x192.png",
-      "sizes": "196x196",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "#b7918c",
-  "background_color": "#b7918c",
+  "start_url": "./",
+  "scope": "./",
+  "theme_color": "#65a52a",
+  "background_color": "#65a52a",
   "display": "standalone"
 }
