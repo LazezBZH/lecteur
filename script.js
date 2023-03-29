@@ -12,8 +12,10 @@ const volumeSlider = document.querySelector(".volume");
 const previousButton = document.querySelector("#previous");
 const playPauseButton = document.querySelector("#play-pause");
 const nextButton = document.querySelector("#next");
+const closeButton = document.querySelector("#close");
 
 const songList = document.querySelector(".song-list");
+let songListItems = songList.getElementsByTagName("li");
 
 let timer = document.querySelector("#timer");
 let update = setInterval(function () {
@@ -34,15 +36,18 @@ let mouseDownOnSlider = false;
 let playlist = document.querySelector("#playlist");
 let playlistAll = document.querySelector(".playlist");
 
+let randomChoice = false;
+let randomBtn = document.getElementById("random");
+let randomNums = [];
+
+console.log("random choice:", randomChoice);
+
+//uniquement la playlist visible au chargement du site
 if (!songIndex) {
   document.getElementsByClassName("player")[0].style.display = "none";
   playlistAll.classList.add("playlist-onload");
 }
-let randomChoice = false;
-let randomBtn = document.getElementById("random");
-let randomNum = 0;
 
-console.log(randomChoice);
 function init() {
   fetch("/data/data.json")
     .then((response) => response.json())
@@ -58,21 +63,24 @@ function init() {
                         data-index="${sound.id}"><div> <div class="song-name">${sound.title}</div><div class="artist-name">${sound.artist}</div></div><div class="duration">${sound.duration} &thinsp; &thinsp;<div class="img-duration"><img src="/data/icons/play.svg" width="24px" alt="play"></div></div></li>`;
       }
 
+      //démarrer le lecteur au clic sur la playlist
       songList.addEventListener(
         "click",
         function (e) {
           randomChoice = false;
+          randomNums = [];
           randomBtn.classList.remove("random-clign");
-          console.log(randomChoice);
+          console.log("random choice:", randomChoice);
           document.getElementsByClassName("player")[0].style.display = "flex";
           playlistAll.classList.remove("playlist-onload");
           songIndex = e.target.closest("li").getAttribute("data-index");
-          console.log(songIndex);
+          console.log("index song playing:", songIndex);
           loadAudio();
           playAudio();
         },
         false
       );
+      //choix mode random
       randomBtn.addEventListener("click", doRandom);
       function doRandom() {
         setRandom();
@@ -82,22 +90,31 @@ function init() {
       }
       function setRandom() {
         randomChoice = true;
-        console.log(randomChoice);
+        console.log("random choice:", randomChoice);
       }
+      //obtenir un index random et affecter cette valeur à songIndex
+      // random index générés stockés dans un tableau randomNums
+      //si le prochain random index figure dans ce tableau on en génère un nouveau
+      //si le tableau contient tous les titres on le vide
       function playRandom() {
-        // let randomNum = 0;
         const randomIndex = Math.floor(Math.random() * data.length);
-        console.log(randomIndex);
-        if (randomIndex == randomNum) {
-          playRandom();
+        console.log("index random song playing:", randomIndex);
+        if (randomNums.length == 12) {
+          randomNums = [];
         }
-        randomNum = randomIndex;
-        // console.log(randomIndex);
+        if (randomNums.includes(randomIndex)) {
+          playRandom();
+        } else {
+          randomNums.push(randomIndex);
+        }
+        console.log("index song(s) allready played:", randomNums);
         document.getElementsByClassName("player")[0].style.display = "flex";
         songIndex = randomIndex;
         loadAudio();
         playAudio();
       }
+
+      //player et controls
       function playAudio() {
         audio.play();
         playPauseButton.querySelector("#pause").classList.remove("hidden");
@@ -120,7 +137,22 @@ function init() {
         vinyl2.classList.add("vinyl2-paused");
         document.getElementById("equalizer").style.display = "none";
       }
-
+      closeButton.addEventListener("click", close);
+      function close() {
+        audio.pause();
+        audio.currentTime = 0;
+        document.getElementsByClassName("player")[0].style.display = "none";
+        playlistAll.classList.add("playlist-onload");
+        vinyl1.classList.add("vinyl1-paused");
+        vinyl2.classList.add("vinyl2-paused");
+        isPlaying = false;
+        for (i = 0; i < songListItems.length; i++) {
+          songListItems[i].classList.remove("active");
+        }
+        songList.getElementsByTagName("li")[0].scrollIntoView();
+        randomBtn.classList.remove("random-clign");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
       function previousSong() {
         songIndex--;
 
@@ -179,6 +211,7 @@ function init() {
         },
         false
       );
+      //fonctionnement différent des boutons next et prévious si mode aléatoire sélectionné
       function aPreviousSong() {
         if (!randomChoice) {
           previousSong();
@@ -189,6 +222,8 @@ function init() {
           nextSong();
         } else playRandom();
       }
+
+      //volume et barre de progression
       volumeSlider.addEventListener(
         "input",
         function () {
@@ -215,10 +250,12 @@ function init() {
       progressEl.addEventListener("mouseup", () => {
         mouseDownOnSlider = false;
       });
+
+      //définir la source audio et l'affichage dans le player
+      //   let songListItems = songList.getElementsByTagName("li");
       function loadAudio() {
         audio.src = songArray[songIndex];
 
-        let songListItems = songList.getElementsByTagName("li");
         songHeading = songListItems[songIndex].getAttribute("data-name");
         songSubHeading = songListItems[songIndex].getAttribute("data-artist");
 
@@ -233,9 +270,9 @@ function init() {
         songList.getElementsByTagName("li")[songIndex].classList.add("active");
         var width = screen.width;
         if (width >= 810) {
-          songList.getElementsByTagName("li")[songIndex].scrollIntoView();
         }
       }
+      //générer playlist d'après le json
       function loadSongs() {
         let songs = songList.getElementsByTagName("li");
         for (i = 0; i < songs.length; i++) {

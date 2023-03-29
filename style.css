@@ -3,7 +3,7 @@
 /* ROOTS FOR THEME */
 html[data-theme="vintage"] {
   --bg-player: #6b5c5c;
-  --txt-1: black;
+  --txt-1: #000000;
   --txt-2: white;
   --range-1: rgb(101, 165, 42);
   --range-2: rgb(85, 26, 26);
@@ -23,7 +23,7 @@ html[data-theme="vintage"] {
 
 html[data-theme="modern"] {
   --bg-player: #ffff00;
-  --txt-1: rgb(4, 172, 161);
+  --txt-1: #04aca1;
   --txt-2: rgb(110, 12, 110);
   --range-1: purple;
   --range-2: pink;
@@ -220,6 +220,7 @@ h1 {
 
 /* PLAYER LEFT */
 .player {
+  /* position: relative; */
   flex: 1;
   padding: 1rem 3rem;
   display: flex;
@@ -235,7 +236,11 @@ h1 {
   background-color: var(--bg-player);
   gap: 10px;
 }
-
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .player h2 {
   font-size: 1.5rem;
   color: var(--txt-1);
@@ -274,7 +279,8 @@ h3 {
   margin-bottom: 10px;
 }
 
-.controls button {
+.controls button,
+.player button {
   border: none;
   cursor: pointer;
   background: none;
@@ -720,6 +726,11 @@ input[type="range"]:focus::-ms-fill-upper {
   }
   body {
     min-height: 1350px;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: -10px;
   }
   .player h2 {
     font-size: 1rem;
