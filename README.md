@@ -68,7 +68,6 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 [UP](#table-des-matières)
 
-[UP](#table-des-matières)
 
 ## Screenshot
 
