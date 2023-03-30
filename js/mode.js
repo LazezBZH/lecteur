@@ -57,3 +57,23 @@ toggle.onclick = function () {
     document.getElementById("gif").src = "/data/songs vintage.gif";
   }
 };
+
+// easter egg
+window.addEventListener(
+  "load",
+  function () {
+    setTimeout(function () {
+      document.getElementById("easter").style.display = "flex";
+    }, 90000);
+  },
+  false
+);
+window.addEventListener(
+  "load",
+  function () {
+    setTimeout(function () {
+      document.getElementById("easter").style.display = "none";
+    }, 110000);
+  },
+  false
+);

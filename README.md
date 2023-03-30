@@ -1,8 +1,8 @@
 # SONGS FOR YOU
 
-![logo vintage](./data/songs%20vintage.gif) ![logo moderne](./data/songs%20moderne.gif)
+![logo vintage](./data/songs%20vintage.gif)
 
-Application réalisée dans le cadre du concours #4 du Designer du Web
+Application réalisée dans le cadre du concours #5 du Designer du Web
 Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 - Le concours: [lien Youtube](https://youtu.be/x_qmglVkGMc)
@@ -20,7 +20,7 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 - [La voir en action](#la-voir-en-action)
 - [Moi](#moi)
 
-## Consignes (Discord)
+## Consignes
 
 > Votre travail doit être ORIGINAL et UNIQUE, autant au niveau du DESIGN que du CODE.
 > Aucune ressemblance avec quoique ce soit sur le web n'est tolérée, sous peine d'être exclu du concours.
@@ -64,6 +64,8 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 - dont surtout la première, grand coup de coeur du créateur du concours lors du concours précédent
 - easter egg prévu si j'ai le temps parce que easter is coming
 
+[UP](#table-des-matières)
+
 ## Screenshot
 
 ![sreen](./documents/songs%20for%20you.png)
@@ -75,10 +77,12 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 > Spéciale dédicace à mon ado de bientôt 16 ans
 > (c'est tellement bientôt que quand vous lirez cela ça sera probablement passé)
-> alias P'tit con, mon conseillé personnel en expérience utilisateur
+> alias P'tit con, mon conseiller personnel en expérience utilisateur
 > qui sans vergogne m'a rajouté du travail!
 
-## La voir en action (enfin l'entendre surtout)
+## La voir en action
+
+(enfin l'entendre surtout)
 
 - Déploiement: [SONGS FOR YOU](https://songs-for-you.netlify.app/)
 
@@ -88,3 +92,4 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 - LinkedIn - [B. HÉRAULT](https://www.linkedin.com/in/benedicte-herault/)
 
 [UP](#table-des-matières)
+![logo moderne](./data/songs%20modern.gif)
