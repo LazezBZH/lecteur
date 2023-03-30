@@ -5,7 +5,7 @@
 Application réalisée dans le cadre du concours #5 du Designer du Web.
 
 
-Objectif: "Intégrer une page avec un lecteur audio / vidéo."
+Objectif: "Intégrer une page avec un lecteur audio ou vidéo."
 
 - Le concours: [lien Youtube](https://youtu.be/x_qmglVkGMc)
 
