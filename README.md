@@ -1,6 +1,6 @@
 # SONGS FOR YOU
 
-![logo vintage](./data/songs%20vintage.gif)
+![logo vintage](./data/songs%20vintage.gif) ![logo moderne](./data/songs%20moderne.gif)
 
 Application réalisée dans le cadre du concours #5 du Designer du Web
 Objectif: "Intégrer une page avec un lecteur audio / vidéo."
@@ -66,6 +66,8 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 [UP](#table-des-matières)
 
+[UP](#table-des-matières)
+
 ## Screenshot
 
 ![sreen](./documents/songs%20for%20you.png)
@@ -80,9 +82,7 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 > alias P'tit con, mon conseiller personnel en expérience utilisateur
 > qui sans vergogne m'a rajouté du travail!
 
-## La voir en action
-
-(enfin l'entendre surtout)
+## La voir en action (enfin l'entendre surtout)
 
 - Déploiement: [SONGS FOR YOU](https://songs-for-you.netlify.app/)
 
