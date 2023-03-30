@@ -2,8 +2,10 @@
 
 ![logo vintage](./data/songs%20vintage.gif) ![logo moderne](./data/songs%20moderne.gif)
 
-Application réalisée dans le cadre du concours #5 du Designer du Web
-Objectif: "Intégrer une page avec un lecteur audio / vidéo."
+Application réalisée dans le cadre du concours #5 du Designer du Web.
+
+
+Objectif: "Intégrer une page avec un lecteur audio ou vidéo."
 
 - Le concours: [lien Youtube](https://youtu.be/x_qmglVkGMc)
 
@@ -55,7 +57,7 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 ### Outils
 
 - Thème géré par JS et CSS roots
-- Localstorage enregistre le choix du théme vintage ou moderne
+- Localstorage enregistre le choix du thème vintage ou moderne
 - Fetch pour obtenir les données (json local)
 
 ### Pour fayotter
@@ -66,7 +68,6 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 [UP](#table-des-matières)
 
-[UP](#table-des-matières)
 
 ## Screenshot
 
@@ -74,12 +75,15 @@ Objectif: "Intégrer une page avec un lecteur audio / vidéo."
 
 ## Bilan
 
-- ai dû passer du temps sur le mode random (enfin surtout pour revenir du random à la lecture dans l'ordre)
+- j'ai dû passer du temps sur le mode random (enfin surtout pour revenir du random à la lecture dans l'ordre)
 - premiers essais d3 et canva (faut vraiment que je vois ça plus à fond)
 
 > Spéciale dédicace à mon ado de bientôt 16 ans
+>
 > (c'est tellement bientôt que quand vous lirez cela ça sera probablement passé)
+>
 > alias P'tit con, mon conseiller personnel en expérience utilisateur
+>
 > qui sans vergogne m'a rajouté du travail!
 
 ## La voir en action (enfin l'entendre surtout)
